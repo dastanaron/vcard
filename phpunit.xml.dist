@@ -4,7 +4,7 @@
         colors="true"
         verbose="true">
     <testsuites>
-        <testsuite name="JeroenDesloovere Test Suite">
+        <testsuite name="Dastanaron Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

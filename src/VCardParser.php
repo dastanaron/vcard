@@ -1,6 +1,6 @@
 <?php
 
-namespace JeroenDesloovere\VCard;
+namespace Dastanaron\VCard;
 
 /*
  * This file is part of the VCard PHP Class from Jeroen Desloovere.
@@ -105,11 +105,11 @@ class VCardParser implements Iterator
     /**
      * Fetch the imported VCard at the specified index.
      *
-     * @throws OutOfBoundsException
+     * @throws \OutOfBoundsException
      *
      * @param int $i
      *
-     * @return stdClass
+     * @return \stdClass
      *    The card data object.
      */
     public function getCardAtIndex($i)

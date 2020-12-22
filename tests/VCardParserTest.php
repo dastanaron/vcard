@@ -1,9 +1,9 @@
 <?php
 
-namespace JeroenDesloovere\VCard\tests;
+namespace Dastanaron\VCard\tests;
 
-use JeroenDesloovere\VCard\VCard;
-use JeroenDesloovere\VCard\VCardParser;
+use Dastanaron\VCard\VCard;
+use Dastanaron\VCard\VCardParser;
 
 /**
  * Unit tests for our VCard parser.
@@ -11,7 +11,7 @@ use JeroenDesloovere\VCard\VCardParser;
 class VCardParserTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException OutOfBoundsException
+     * @expectedException \OutOfBoundsException
      */
     public function testOutOfRangeException()
     {
