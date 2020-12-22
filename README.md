@@ -13,7 +13,7 @@ This VCard PHP library can generate a vCard with some data. When using an iOS de
 ### Installation
 
 ```bash
-composer require jeroendesloovere/vcard
+composer require dastanaron/vcard
 ```
 > This will install the latest version of vcard with [Composer](https://getcomposer.org)
 
