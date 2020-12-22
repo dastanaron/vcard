@@ -74,6 +74,8 @@ USER ${UID}:${GID}
 
 WORKDIR /var/www/html
 
+RUN composer install --prefer-dist --no-progress --no-suggest
+
 # Expose the port nginx is reachable on
 EXPOSE 9000
 
