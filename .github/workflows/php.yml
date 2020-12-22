@@ -18,4 +18,4 @@ jobs:
       - name: into-docker
         run: |
           ls -lash
-          run_test.sh
+          ./run_test.sh
