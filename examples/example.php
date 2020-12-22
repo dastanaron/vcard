@@ -7,7 +7,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../src/VCard.php';
 
-use JeroenDesloovere\VCard\VCard;
+use Dastanaron\VCard\VCard;
 
 // define vcard
 $vcard = new VCard();

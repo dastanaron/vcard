@@ -27,9 +27,12 @@
         "phpunit/phpunit": "4.6.*"
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/phpunit -c phpunit.xml.dist"
     },
     "autoload": {
-        "psr-4": { "Dastanaron\\VCard\\": "src/" }
+        "psr-4": {
+            "Dastanaron\\VCard\\": "src/",
+            "Dastanaron\\VCard\\tests\\": "tests/"
+        }
     }
 }

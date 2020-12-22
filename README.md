@@ -1,8 +1,6 @@
 # VCard PHP library
-[![Latest Stable Version](http://img.shields.io/packagist/v/jeroendesloovere/vcard.svg)](https://packagist.org/packages/jeroendesloovere/vcard)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/jeroendesloovere/vcard/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/jeroendesloovere/vcard.svg?branch=master)](https://travis-ci.org/jeroendesloovere/vcard)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jeroendesloovere/vcard/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jeroendesloovere/vcard/?branch=master)
+[![Latest Stable Version](http://img.shields.io/packagist/v/dastanaron/vcard.svg)](https://packagist.org/packages/dastanaron/vcard)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/dastanaron/vcard/blob/master/LICENSE)
 
 This VCard PHP library can generate a vCard with some data. When using an iOS device < iOS 8 it will export as a .ics file because iOS devices don't support the default .vcf files.
 
@@ -28,47 +26,6 @@ composer require dastanaron/vcard
 
 ### Example
 
-``` php
-use JeroenDesloovere\VCard\VCard;
-
-// define vcard
-$vcard = new VCard();
-
-// define variables
-$lastname = 'Desloovere';
-$firstname = 'Jeroen';
-$additional = '';
-$prefix = '';
-$suffix = '';
-
-// add personal data
-$vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
-
-// add work data
-$vcard->addCompany('Siesqo');
-$vcard->addJobtitle('Web Developer');
-$vcard->addRole('Data Protection Officer');
-$vcard->addEmail('info@jeroendesloovere.be');
-$vcard->addPhoneNumber(1234121212, 'PREF;WORK');
-$vcard->addPhoneNumber(123456789, 'WORK');
-$vcard->addAddress(null, null, 'street', 'worktown', null, 'workpostcode', 'Belgium');
-$vcard->addLabel('street, worktown, workpostcode Belgium');
-$vcard->addURL('http://www.jeroendesloovere.be');
-
-$vcard->addPhoto(__DIR__ . '/landscape.jpeg');
-
-// return vcard as a string
-//return $vcard->getOutput();
-
-// return vcard as a download
-return $vcard->download();
-
-// save vcard on disk
-//$vcard->setSavePath('/path/to/directory');
-//$vcard->save();
-
-```
-
 > [View all examples](/examples/example.php) or check [the VCard class](/src/VCard.php).
 
 ### Parsing examples
@@ -77,7 +34,7 @@ The parser can either get passed a VCard string, like so:
 
 ```php
 // load VCardParser classes
-use JeroenDesloovere\VCard\VCardParser;
+use Dastanaron\VCard\VCardParser;
 
 $parser = new VCardParser($vcardString);
 echo $parser->getCardAtIndex(0)->fullname; // Prints the full name.
