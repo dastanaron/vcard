@@ -1,7 +1,7 @@
 {
     "name": "dastanaron/vcard",
     "type": "library",
-    "description": "This VCard PHP class can generate a vCard with some data. This is for of popular library https://github.com/jeroendesloovere/vcard",
+    "description": "This VCard PHP class can generate a vCard with some data. This is fork of the popular library https://github.com/jeroendesloovere/vcard",
     "keywords": ["vcard", "generator", ".vcf", "php"],
     "homepage": "https://github.com/dastanaron/vcard",
     "license": "MIT",
