@@ -25,6 +25,61 @@ class VCardTest extends \PHPUnit_Framework_TestCase
     protected $vcard = null;
 
     /**
+     * @var string
+     */
+    private $firstName;
+
+    /**
+     * @var string
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     */
+    private $additional;
+
+    /**
+     * @var string
+     */
+    private $prefix;
+
+    /**
+     * @var string
+     */
+    private $suffix;
+
+    /**
+     * @var string
+     */
+    private $emailAddress1;
+
+    /**
+     * @var string
+     */
+    private $emailAddress2;
+
+    /**
+     * @var string
+     */
+    private $firstName2;
+
+    /**
+     * @var string
+     */
+    private $lastName2;
+
+    /**
+     * @var string
+     */
+    private $firstName3;
+
+    /**
+     * @var string
+     */
+    private $lastName3;
+
+    /**
      * Data provider for testEmail()
      *
      * @return array
@@ -304,6 +359,24 @@ class VCardTest extends \PHPUnit_Framework_TestCase
                 $this->assertContains('EMAIL;INTERNET:' . $email, $this->vcard->getOutput());
             }
         }
+    }
+
+    /**
+     * @throws \JeroenDesloovere\VCard\VCardException
+     */
+    public function testAddIOSSocialProfile()
+    {
+        $this->vcard->addIOSSocialProfile('https://t.me/username', 'Telegram', '@username');
+        $this->assertContains('X-SOCIALPROFILE;type=Telegram;x-user=@username:https://t.me/username', $this->vcard->getOutput());
+    }
+
+    /**
+     * @throws \JeroenDesloovere\VCard\VCardException
+     */
+    public function testAddCustomField()
+    {
+        $this->vcard->addCustomField('TEL;TYPE=cell', '+74954785171');
+        $this->assertContains('TEL;TYPE=cell:+74954785171', $this->vcard->getOutput());;
     }
 
     /**

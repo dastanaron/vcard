@@ -385,6 +385,36 @@ class VCard
     }
 
     /**
+     * @param $link
+     * @param $type
+     * @param $user
+     * @throws VCardException
+     * @example X-SOCIALPROFILE;type=Instagram;x-user=@username:https://instagram.com/username/
+     */
+    public function addIOSSocialProfile($link, $type, $user)
+    {
+        $this->setProperty(
+            'social',
+            'X-SOCIALPROFILE' . ';type=' . $type . ';x-user=' . $user,
+            $link
+        );
+    }
+
+    /**
+     * @param $key
+     * @param $value
+     * @throws VCardException
+     */
+    public function addCustomField($key, $value)
+    {
+        $this->setProperty(
+            'custom',
+            $key,
+            $value
+        );
+    }
+
+    /**
      * Add categories
      *
      * @param array $categories
