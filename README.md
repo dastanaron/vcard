@@ -17,6 +17,15 @@ composer require jeroendesloovere/vcard
 ```
 > This will install the latest version of vcard with [Composer](https://getcomposer.org)
 
+### Test
+
+1. Clone this project
+2. `cd` to the project folder
+3. Run command:
+```bash
+./run_test.sh
+````
+
 ### Example
 
 ``` php
@@ -124,8 +133,9 @@ More info on how to work with GitHub on help.github.com.
 ## Credits
 
 - [Jeroen Desloovere](https://github.com/jeroendesloovere)
+- [Dastanaron](https://github.com/dastanaron)
 - [All Contributors](https://github.com/jeroendesloovere/vcard/contributors)
 
 ## License
 
-The module is licensed under [MIT](./LICENSE.md). In short, this license allows you to do everything as long as the copyright statement stays present.
+The module is licensed under [MIT](./LICENSE). In short, this license allows you to do everything as long as the copyright statement stays present.

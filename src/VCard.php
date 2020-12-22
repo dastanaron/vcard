@@ -388,6 +388,7 @@ class VCard
      * @param $link
      * @param $type
      * @param $user
+     * @return $this
      * @throws VCardException
      * @example X-SOCIALPROFILE;type=Instagram;x-user=@username:https://instagram.com/username/
      */
@@ -398,11 +399,14 @@ class VCard
             'X-SOCIALPROFILE' . ';type=' . $type . ';x-user=' . $user,
             $link
         );
+
+        return $this;
     }
 
     /**
      * @param $key
      * @param $value
+     * @return $this
      * @throws VCardException
      */
     public function addCustomField($key, $value)
@@ -412,6 +416,8 @@ class VCard
             $key,
             $value
         );
+
+        return $this;
     }
 
     /**
