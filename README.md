@@ -1,6 +1,7 @@
 # VCard PHP library
 [![Latest Stable Version](http://img.shields.io/packagist/v/dastanaron/vcard.svg)](https://packagist.org/packages/dastanaron/vcard)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/dastanaron/vcard/blob/master/LICENSE)
+[![donate](https://frserver.ru/img/coffee.png)](http://qiwi.com/n/MISIT616)
 
 This VCard PHP library can generate a vCard with some data. When using an iOS device < iOS 8 it will export as a .ics file because iOS devices don't support the default .vcf files.
 
