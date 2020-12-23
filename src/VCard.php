@@ -47,7 +47,9 @@ class VCard
         'address',
         'phoneNumber',
         'url',
-        'label'
+        'label',
+        'social',
+        'custom',
     ];
 
     /**
